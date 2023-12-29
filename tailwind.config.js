@@ -1,0 +1,50 @@
+module.exports = {
+  mode: "jit",
+  content: [
+    "./src/**/**/*.{js,ts,jsx,tsx,html,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,html,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    screens: { md: { max: "1050px" }, sm: { max: "550px" } },
+    extend: {
+      colors: {
+        blue: { 800: "#1065ca", A700: "#0061ff" },
+        blue_gray: {
+          100: "#d6d6d6",
+          400: "#74839d",
+          800: "#223358",
+          900: "#23292e",
+          "100_01": "#d9d9d9",
+          "900_01": "#262b35",
+        },
+        red: { 100: "#ecd6c8", 300: "#d97356" },
+        gray: {
+          50: "#f8f9fa",
+          100: "#f4f5f7",
+          300: "#e1e1e1",
+          600: "#6e6e6e",
+          800: "#49454f",
+          900: "#191919",
+          "900_02": "#040e24",
+          "900_03": "#1d1b20",
+          "900_00": "#1a1a1a00",
+          "900_01": "#0a033c",
+        },
+        black: { 900: "#000000", "900_01": "#000201" },
+        yellow: { 800: "#f4b719" },
+        deep_orange: { A400: "#ff1616" },
+        white: { A700: "#ffffff" },
+      },
+      fontFamily: {
+        inter: "Inter",
+        manrope: "Manrope",
+        raleway: "Raleway",
+        poppins: "Poppins",
+        montserrat: "Montserrat",
+        rubik: "Rubik",
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+};
