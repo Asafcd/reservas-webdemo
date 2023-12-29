@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { Button, Img, Input, List, SelectBox, Text } from "components";
 
 const dropdownlargeOptionsList = [
@@ -14,6 +16,8 @@ const dropdownlargeOneOptionsList = [
 ];
 
 const ReservarPage: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="bg-gray-300 flex flex-col font-montserrat items-start justify-start mx-auto pb-10 w-auto sm:w-full md:w-full">
@@ -1002,7 +1006,8 @@ const ReservarPage: React.FC = () => {
                     variant="fill"
                   />
                   <Button
-                    className="cursor-pointer font-manrope font-semibold text-base text-center w-full"
+                    className="common-pointer cursor-pointer font-manrope font-semibold text-base text-center w-full"
+                    onClick={() => navigate("/propertydetailsone")}
                     shape="round"
                     color="blue_800"
                     size="md"

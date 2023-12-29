@@ -1,10 +1,14 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { Button, Img, Input, List, Text } from "components";
 import Header from "components/Header";
 import PropertyDetailsListstartwo from "components/PropertyDetailsListstartwo";
 
 const PropertyDetailsPage: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="bg-gray-300 flex flex-col font-montserrat items-start justify-start mx-auto pb-10 w-auto sm:w-full md:w-full">
@@ -548,7 +552,8 @@ const PropertyDetailsPage: React.FC = () => {
                           variant="fill"
                         ></Input>
                         <Button
-                          className="cursor-pointer font-semibold text-base text-center w-full"
+                          className="common-pointer cursor-pointer font-semibold text-base text-center w-full"
+                          onClick={() => navigate("/reservar")}
                           shape="round"
                           color="blue_800"
                           size="md"
